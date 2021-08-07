@@ -218,6 +218,10 @@ const ConnectedVideoGrid = ({
   const handleChange = (event, value) => {
     console.log({ event });
     if (value === 1) return direct && direct({ type: "reset" });
+    if (value === -2) {
+      SearchParams.remove(payload.param);
+      return direct && direct({ type: "reset" });
+    }
     direct && direct({ type: "search", value });
   };
 
@@ -281,6 +285,7 @@ const ConnectedVideoGrid = ({
           {SearchParams.params.map((name) => (
             <Tab value={name} label={name} wrapped {...a11yProps(name)} />
           ))}
+          <Tab icon={<Close />} value={-2} />
         </Tabs>
       </Collapse>
 
