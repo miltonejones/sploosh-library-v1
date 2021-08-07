@@ -17,7 +17,8 @@ class ViewConfig {
         Object.assign(params, { [n]: defaultProps[n] });
     }
     params.type === "favorite" && Object.assign(params, { mask: `favorite/1` });
-    !!params.param && Object.assign(params, { mask: `title/${params.param}` });
+    !!params.param &&
+      Object.assign(params, { mask: `title/${params.param.replace("^", "")}` });
     !!params.domain &&
       Object.assign(params, { mask: `domain/${params.domain}` });
     this.params = params;

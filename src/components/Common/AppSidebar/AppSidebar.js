@@ -9,13 +9,17 @@ import { SearchParams } from "../../TabbedSearchCard/TabbedSearchCard";
 import MenuSimple from "../MenuSimple/MenuSimple";
 import "./AppSidebar.css";
 
+const filtered = (f) => f?.filter((i) => i.indexOf("^") < 0);
+const pinned = (f) => f?.filter((i) => i.indexOf("^") > 0);
+
 const AppSidebar = ({ wide, direct, param, type }) => {
   const [dialogProps, setDialogProps] = useState({});
   const [searches, setSearches] = React.useState([]);
   const [expanded, setExpanded] = useState(false);
   // const searches = SearchPersistService.getSavedSearches();
-  const truncated = searches?.slice(0, 10);
-  const remaining = searches?.slice(10);
+  const truncated = filtered(searches?.slice(0, 10));
+  const remaining = filtered(searches?.slice(10));
+  const alwayson = pinned(searches);
 
   const remove = (text) => {
     ask(`Really remove search "${text}"?`, "Confirm delete").then((yes) => {
@@ -61,6 +65,22 @@ const AppSidebar = ({ wide, direct, param, type }) => {
       ))}
 
       <Divider />
+
+      {alwayson?.length && !!wide && (
+        <>
+          <h4>Pinned Searches</h4>
+          {alwayson?.map((value, i) => (
+            <SearchItem
+              key={value}
+              direct={direct}
+              value={value.replace("^", "")}
+              active={value === param}
+              update={update}
+              remove={remove}
+            />
+          ))}
+        </>
+      )}
 
       <h4>Saved Searches</h4>
       {!!wide &&

@@ -22,7 +22,7 @@
     align-items: center;
 }
 
-.active {
+.PopoverSelect .active {
     font-weight: bold !important;
     color: white;
 }
