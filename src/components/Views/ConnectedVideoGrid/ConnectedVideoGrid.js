@@ -127,8 +127,8 @@ const ConnectedVideoGrid = ({
     icon: <MoreVert />,
   };
 
-  const search = () =>
-    show({ type: "search", name: "Search" }).then(console.log);
+  // const search = () =>
+  //   show({ type: "search", name: "Search" }).then(console.log);
 
   const buttons = [
     {
