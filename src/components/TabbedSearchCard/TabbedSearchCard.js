@@ -9,7 +9,7 @@ import ThumbnailGrid from "../Common/Thumbnail/ThumbnailGrid/ThumbnailGrid";
 import ToolTipButton from "../Common/ToolTipButton/ToolTipButton";
 import "./TabbedSearchCard.css";
 
-function a11yProps(index) {
+export function a11yProps(index) {
   return {
     id: `wrapped-tab-${index}`,
     "aria-controls": `wrapped-tabpanel-${index}`,

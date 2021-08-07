@@ -1,4 +1,4 @@
-import { Chip, Collapse } from "@material-ui/core";
+import { Chip, Collapse, Tab, Tabs } from "@material-ui/core";
 import {
   Add,
   CheckCircleOutline,
@@ -26,6 +26,10 @@ import GlobalModal, {
   ShopContent,
 } from "../../GlobalModal/GlobalModal";
 import SavedSearchEditButtons from "../../SavedSearchEditButtons/SavedSearchEditButtons";
+import {
+  a11yProps,
+  SearchParams,
+} from "../../TabbedSearchCard/TabbedSearchCard";
 import "./ConnectedVideoGrid.css";
 
 const collate = (numbers, rows) => {
@@ -41,6 +45,7 @@ const ConnectedVideoGridMode = {
   NORMAL: 0,
   SELECT: 1,
   ADD: 2,
+  FIND: 3,
 };
 const PAGE_SIZE = 30;
 const ConnectedVideoGrid = ({
@@ -138,7 +143,9 @@ const ConnectedVideoGrid = ({
     },
     {
       icon: <FindInPage />,
-      click: () => search(),
+      click: () => toggle(ConnectedVideoGridMode.FIND),
+      when: () => !!SearchParams.params.length,
+      //    click: () => search(),
     },
     {
       icon: <Shop />,
@@ -207,6 +214,13 @@ const ConnectedVideoGrid = ({
     length: response.count,
     click: setPage,
   };
+
+  const handleChange = (event, value) => {
+    console.log({ event });
+    if (value === 1) return direct && direct({ type: "reset" });
+    direct && direct({ type: "search", value });
+  };
+
   return (
     <div className="ConnectedVideoGrid">
       <div className="flexed video-grid-toolbar">
@@ -256,6 +270,20 @@ const ConnectedVideoGrid = ({
           icon={<Add />}
         />
       </Collapse>
+      <Collapse in={mode === ConnectedVideoGridMode.FIND}>
+        {/* {JSON.stringify(payload)} */}
+        <Tabs
+          value={payload.param || 1}
+          onChange={handleChange}
+          aria-label="wrapped label tabs example"
+        >
+          <Tab value={1} label="All Videos" wrapped />
+          {SearchParams.params.map((name) => (
+            <Tab value={name} label={name} wrapped {...a11yProps(name)} />
+          ))}
+        </Tabs>
+      </Collapse>
+
       <div>
         <ThumbnailGrid {...args} />
       </div>
