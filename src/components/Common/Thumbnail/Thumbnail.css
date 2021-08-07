@@ -1,0 +1,130 @@
+
+.Thumbnail {
+  --thumb-width: 260px;
+  --thumb-height: 260px;
+  --thumb-height-offset: 104px; 
+  --thumb-width-offset: 80px; 
+  --thumb-row-margin: 2px 4px 0 4px;
+  --thumb-title-margin: 2px 0;
+  --thumb-body-margin:6px 2px;
+  --thumb-favorite-color: #37a;
+}
+
+.Thumbnail.small {
+  --thumb-width: 148px;
+  --thumb-height: 142px;
+  --thumb-height-offset: 40px; 
+  --thumb-width-offset: 0px; 
+  --thumb-row-margin: 0px 4px 0 4px;
+  --thumb-title-margin: 0;
+  --thumb-body-margin:2px 0;
+}
+
+.Thumbnail {
+  position: relative;
+  overflow: hidden;
+  position: relative;
+  font-size: .9rem;
+  max-height: var(--thumb-height);
+  outline-offset: 1px;
+  max-width: var(--thumb-width);
+  font-family: var(--global-font);
+  margin: var(--thumb-body-margin);
+}
+
+.thumb-action-menu {
+  position: absolute;
+  top:2px;
+  right: 2px;
+  opacity: .1;
+}
+ 
+
+.Thumbnail:hover .thumb-action-menu {
+  opacity: 1;
+}
+
+.Thumbnail img.thumb-image {
+  width: var(--thumb-width);
+  height: auto;
+  min-height: 100px;
+  max-height: calc(var(--thumb-height) - var(--thumb-height-offset));
+  max-width: var(--thumb-width);
+  top: 0;
+  z-index: 0;
+}
+
+.thumb-title-row {
+  display: flex;
+  flex-wrap: nowrap;
+  
+}
+
+.thumb-model-row {
+  margin: var(--thumb-row-margin);
+}
+
+.thumb-title-row .thumb-title-avatar,
+.thumb-title-row .thumb-title {
+  margin: 4px 4px 2px 4px;
+}
+ 
+.thumb-title-row .thumb-title {
+  padding: var(--thumb-title-margin);
+}
+
+.Thumbnail.favorite {
+   /* box-shadow: 1px 1px 2px #777; */
+   border: solid 1px var(--thumb-favorite-color);
+}
+
+.Thumbnail.favorite .thumb-title-row {
+  font-weight: 500;
+  color: var(--thumb-favorite-color);
+}
+
+.Thumbnail.visited {
+  font-style: italic;
+  color: gray;
+  opacity: .7;
+}
+
+.Thumbnail.selected   {
+  outline: dotted 2px rebeccapurple;
+  opacity: .4;
+}
+
+.Thumbnail.error   {
+  outline: solid 2px red;
+  opacity: .4;
+}
+
+.Thumbnail.selected .thumb-title-row {
+  font-weight: normal;
+  color: gray;
+  text-decoration: line-through;
+}
+
+.thumb-menu {
+  padding: var(--thumb-title-margin);
+  margin-left: auto;
+  text-align: right;
+}
+
+.thumb-info-row {
+  /* width: var(--thumb-width); */
+  /* position: absolute;
+  bottom: 4px; */
+  margin-top: 4px;
+  padding: 0 4px;
+  display: flex;
+}
+
+.app-data-item-maker {
+  margin-left: auto;
+  padding: 0 8px;
+}
+
+.debug, .debug img {  
+  outline: dotted 1px gray;
+}

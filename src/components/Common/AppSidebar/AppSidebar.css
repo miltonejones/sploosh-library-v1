@@ -1,0 +1,69 @@
+ 
+.AppSidebar {
+  width: 72px;
+  height: calc(100vh - 72px);
+  /* outline: solid 1px rebeccapurple; */
+  margin: 2px;
+  font-family: var(--global-font);
+  font-size: .8rem;
+  transition: width 0.2s linear;
+}
+
+.sidebar-link { 
+  text-align: center;
+  width: 72px;
+  height: 56px;
+  margin: 8px 0;
+}
+
+.sidebar-link.active { 
+  font-weight: 600;
+}
+
+.sidebar-search {
+  /* border: dotted 1px #888; */
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  overflow: hidden;
+}
+
+.sidebar-search.active {
+  /* background-color: yellow; */
+  font-weight: 600;
+}
+
+.AppSidebar.wide {
+  width: 200px;
+  font-size: .9rem;
+  overflow: auto;
+  min-width: 220px;
+}
+
+h4 {
+  display: none;
+}
+
+.AppSidebar.wide .sidebar-link {
+  /* border: dotted 1px green; */
+  width: 180px;
+  display: flex;
+  align-items: center;
+  height: 56px;
+  margin: 0;
+}
+
+hr {
+  display: none;
+}
+
+
+
+.AppSidebar.wide hr {
+  display: block;
+}
+.AppSidebar.wide h4 {
+  display: block;
+  margin: 18px 10px 12px 10px;
+  font-size: 1rem;
+}

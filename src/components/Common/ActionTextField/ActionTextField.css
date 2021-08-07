@@ -1,0 +1,10 @@
+.text-field-dirty {
+  color: gray;
+  font-style: italic;
+}
+
+.text-field-clean {
+  color: black;
+  font-style: normal;
+  font-weight: 600;
+}

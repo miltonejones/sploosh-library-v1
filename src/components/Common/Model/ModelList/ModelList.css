@@ -1,0 +1,23 @@
+.ModelList.small {
+  line-height: 1;
+}
+.ModelList.grid {
+  max-width: 580px;
+  overflow: hidden;
+}
+.grid-96 {
+  display: grid;
+  grid-template-columns: repeat( auto-fill, minmax(96px, 1fr) );
+}
+.grid-96.large {
+  display: grid;
+  grid-template-columns: repeat( auto-fill, minmax(152px, 1fr) );
+}
+.app-add-model-link {
+  margin: 0 4px;
+  font-size: .8rem;
+}
+
+.model-list-label {
+  cursor: pointer;
+}

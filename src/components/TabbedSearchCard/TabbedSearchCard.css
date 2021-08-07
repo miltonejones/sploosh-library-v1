@@ -1,0 +1,17 @@
+
+.TabbedSearchCard {
+  margin: 0 40px;
+  min-width: 900px;
+  /* outline: dotted 1px red; */
+}
+
+.TabbedSearchCard .modal-data-grid {
+  max-width: 740px;
+  outline: dotted 1px rebeccapurple;
+  /* margin: 0 40px */
+}
+
+.TabbedSearchCard .app-data-grid .app-data-item {
+  width: 140px; 
+  max-width: 140px;
+}

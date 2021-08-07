@@ -1,0 +1,40 @@
+
+.ThumbnailActionMenuItem {
+  --action-menu-bg: black;
+  --action-menu-fg: white;
+}
+
+
+.ThumbnailActionMenuItem {
+  position: relative;
+  display: flex;
+  /* border: dotted 1px yellow; */
+  width: 80px;
+  height: 24px;
+  overflow: hidden;
+  /* outline: dotted 1px rebeccapurple; */
+  color: var(--action-menu-fg);
+  font-family: var(--global-font);
+  margin: 2px 0;
+  cursor: pointer;
+}
+
+.thumbnail-action-label { 
+  position: absolute;
+  left: 80px;
+  width: 64px;
+  transition: left 0.2s linear;
+  z-index: 1;
+  padding: 2px 4px 6px 4px;
+  background-color: var(--action-menu-bg);
+}
+.thumbnail-action-icon {
+  margin-left: auto;
+  /* outline: dotted 1px green; */
+  background-color: var(--action-menu-bg);
+  z-index: 2;
+}
+ 
+.ThumbnailActionMenuItem:hover .thumbnail-action-label{
+  left: 6px; 
+}

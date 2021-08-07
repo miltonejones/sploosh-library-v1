@@ -1,0 +1,5 @@
+.PaginationBar {
+  display: flex;
+  align-items: baseline;
+  font-family: var(--global-font);
+}

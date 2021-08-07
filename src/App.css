@@ -1,38 +1,87 @@
+
+:root {
+  --standard-link-color: black;
+  --hover-link-color: #37a;
+  --active-link-color: red;
+  --global-font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
 .App {
-  text-align: center;
+  font-family: var(--global-font);
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.no-wrap {
+  white-space: nowrap;
+  text-overflow: clip;
+  overflow: hidden;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.full {
+  width: 100%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+.flexed {
+  display: flex; 
   align-items: center;
+  flex-wrap: nowrap;
+}
+
+.flexed.top {
+  align-items: baseline;
+}
+
+.flexed.center {
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.flexed.right {
+  justify-content: left;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.flexed.wrap {
+  flex-wrap: wrap;
+}
+
+
+.app-label {
+  background: #e0e0e0;
+  border-radius: 3px;
+  color: #444;
+  padding: 2px 6px;
+  margin-right: 2px;
+  font-size: .7rem;
+}
+
+.app-link {
+  cursor: pointer;
+  color: var(--standard-link-color); 
+}
+.app-link:hover {
+  color: var(--hover-link-color);
+  text-decoration: underline;
+}
+
+.app-link:active {
+  color: var(--active-link-color)
+}
+
+
+.icon-button-no-padding.sm {
+  padding: 0 6px !important;
+}
+
+.red {
+  color: red
+}
+
+.bold {
+  font-weight: 600;
+} 
+
+
+.pull-right {
+  margin-left: auto;
 }

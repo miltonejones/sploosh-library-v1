@@ -1,0 +1,9 @@
+.ThumbnailGrid {
+  display: grid; 
+  grid-template-columns: repeat( auto-fill, minmax(250px, 1fr) );
+  max-width: 1360px;
+  padding-bottom: 20px;
+}
+.ThumbnailGrid.small { 
+  grid-template-columns: repeat( auto-fill, minmax(148px, 1fr) );
+}

@@ -1,0 +1,4 @@
+.ConnectedModelGrid {  margin: 8px;
+  width: calc(100vw - 80px);
+  height: calc(100vh - 72px);
+  overflow: auto;}

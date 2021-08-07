@@ -1,0 +1,24 @@
+.ModelThumbnail  {
+  margin: 1px;
+  max-width: 96px;
+  overflow: hidden;
+  /* outline: dotted 1px red;  */
+  font-family: var(--global-font);
+  font-size: .9rem;
+}
+.ModelThumbnail img {
+  width: 90px;
+  max-height: 120px;
+  height: auto;
+}
+
+.ModelThumbnail.large  { 
+  max-width: 146px;
+  padding-top: 12px;
+  padding-right: 12px;
+  text-align: center;
+}
+.ModelThumbnail.large img  { 
+  width: 140px; 
+  max-height: 180px;
+}

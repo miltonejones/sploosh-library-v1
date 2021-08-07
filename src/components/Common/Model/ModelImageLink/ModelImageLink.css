@@ -1,0 +1,19 @@
+.app-data-item-model {
+  font-size: .8rem;
+  color: var(--standard-link-color);
+  cursor: pointer;
+}
+
+.app-data-item-model:hover {
+  color: var(--hover-link-color)
+}
+
+.app-data-item-model:active {
+  color: var(--active-link-color)
+}
+
+img.model-tooltip-image {
+  width: 78px;
+  height: auto;
+}
+

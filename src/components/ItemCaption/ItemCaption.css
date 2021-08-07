@@ -1,0 +1,16 @@
+.ItemCaption {
+  cursor: pointer;
+  max-width: calc(var(--thumb-width) - var(--thumb-width-offset));
+  font-size: .85rem;
+}
+.ItemCaption.wide { 
+  max-width: calc(var(--thumb-width) - 10); 
+}
+
+.ItemCaption:hover {
+  color: var(--hover-link-color)
+}
+
+.ItemCaption:active {
+  color: var(--active-link-color)
+}

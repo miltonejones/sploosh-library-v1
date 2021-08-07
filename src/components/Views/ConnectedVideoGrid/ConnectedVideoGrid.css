@@ -1,0 +1,9 @@
+.ConnectedVideoGrid {
+  margin: 8px;
+  width: calc(100vw - 80px);
+  height: calc(100vh - 80px);
+  overflow: auto;
+}
+.video-grid-toolbar {
+  margin-right: 12px;
+}

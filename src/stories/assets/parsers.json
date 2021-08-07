@@ -1,0 +1,870 @@
+[
+  {
+    "searchURL": "http://yespornplease.com/search?q=",
+    "fields": {
+      "image": "<meta\\s*name=\"thumbnail\"\\s*content=\"([^\"]*?)\"\\s*/>",
+      "embed": {
+        "regexProp": {
+          "width": 654,
+          "width_old": "width=\"([^\"]*?)\"",
+          "height_old": "height=\"([^\"]*?)\"",
+          "src": "src=\"([^\"]*?)\"",
+          "height": 440
+        },
+        "regexTag": "<iframe\\s*allowfullscreen=\"true\"(.*)"
+      },
+      "title": "<title>(.*)\\s*-\\s*YesPornPlease<\\/title>",
+      "tags": "<a class=\"tag tagHover\"[^>]*?>([^<]*?)<\\/a>"
+    },
+    "pageMatrix": {
+      "pagePattern": "<a\\s*href=\"([^\"]*?p=\\d+[^\"]*?)\">[\\d]*?</a>",
+      "fields": ["URL", "Photo", "Text", "Time"],
+      "prefix": "http://yespornplease.com",
+      "fieldText": "URL,Photo,Text,Time"
+    },
+    "Count": 7,
+    "modelParser": {
+      "pattern": "<img width=\"210\".*src=\"(.*)\"\\s+alt",
+      "url": "http://www.redtube.com/pornstar/[MODELNAME]"
+    },
+    "pageParser": "",
+    "pageRegex": "\\/search\\?p=(\\d+)&q=[^\"]+",
+    "domain": "yespornplease.com"
+  },
+  {
+    "searchURL": "https://www.javdoe.tv/search/movie/[value].html",
+    "fields": {
+      "image": "<meta property=\"og:image\" content=\"([^\"]*?)\" />",
+      "model": "<div class=\"meta-content\"[\\s\\S]*?href=\"\\/star\\/[^\"]*?\">([^\\/]*?)<\\/a>",
+      "embed": {
+        "regexProp": {
+          "width": 560,
+          "src": ".*src=\"(.*)\"\\s*frameborder",
+          "height": 315
+        },
+        "regexTag": "<iframe\\swidth=(.*)"
+      },
+      "title": "<title>(.*)<\\/title>",
+      "tags": "tag\\/(\\w+)\\.",
+      "desc": "<div\\sclass=\"main\\-content\">([^<]*?)<\\/div>"
+    },
+    "pageMatrix": {
+      "fields": ["URL", "Photo", "Text", "Time"],
+      "prefix": null,
+      "fieldText": "URL,Photo,Text,Time"
+    },
+    "alternate": "javdoe.tv",
+    "Count": 24721,
+    "modelParser": {
+      "pattern": "<a\\shref=\"/star/.*\">(.*)</a>",
+      "url": "http://www.redtube.com/pornstar/[MODELNAME]"
+    },
+    "pageParser": "<div class=\"col-md-3 col-sm-6 text-center main-item\">[\\s\\S]*?<a class=\"main-[^\"]*\" href=\"([^\"]*?)\">[\\s\\S]*?<img class=\"placeholder iswatched\" src=\"[^\"]*?\" data-src=\"(https[^\"]*?)\" alt=\"([^\"]*?)\" [\\s\\S]*?",
+    "spaceChar": "-",
+    "pageRegex": "\\/[^>.]*?page\\-([0-9]+)\\.html",
+    "domain": "javdoe.tv"
+  },
+  {
+    "searchURL": "http://www.txxx.com/search/?s=",
+    "fields": {
+      "image": "image:\\s'(.*)'",
+      "embed": {
+        "regexProp": {
+          "width": "idth=\"(\\d+)\"",
+          "src": ".*src=\"(.*)\".*fr",
+          "height": "height=\"(\\d+)\""
+        },
+        "regexTag": "<iframe w(.*)<\\/iframe"
+      },
+      "title": "<title.*>(.*)<\\/title>",
+      "tags": "<a href=\"\\/categories\\/[^\"]*?\"[^>]*?>([^<]*?)<\\/a>"
+    },
+    "modelParser": {
+      "pattern": "<img width=\"210\".*src=\"(.*)\"\\s+alt",
+      "url": "http://www.redtube.com/pornstar/[MODELNAME]"
+    },
+    "domain": "txxx.com",
+    "Count": 6
+  },
+  {
+    "searchURL": "https://javfinder.is/search/movie/[value].html",
+    "fields": {
+      "image": "<meta property=\"og:image\" content=\"([^\"]*?)\" />",
+      "model": "<a href=\"\\/star\\/[^\"]*?\">([^<]*?)</a>",
+      "embed": {
+        "regexProp": {
+          "width": 560,
+          "src": ".*src=\"(.*)\"\\s*frameborder",
+          "height": 315
+        },
+        "regexTag": "<iframe\\swidth=(.*)"
+      },
+      "title": "<title>(.*)<\\/title>",
+      "tags": "<a\\shref=\"/tag/.*\">(.*)</a>"
+    },
+    "pageMatrix": {
+      "fields": ["URL", "Photo", "Text", "Time"],
+      "prefix": "https://www3.javfinder.is",
+      "fieldText": "URL,Photo,Text,Time"
+    },
+    "alternate": "javfinder.sh",
+    "modelParser": {
+      "pattern": "<a\\shref=\"/star/.*\">(.*)</a>",
+      "url": "http://www.redtube.com/pornstar/[MODELNAME]"
+    },
+    "pageParser": "",
+    "spaceChar": "-",
+    "pageRegex": "\\/search\\/movie\\/[^\\/]*?\\/page\\-(\\d+)\\.html",
+    "domain": "javfinder.is"
+  },
+  {
+    "searchURL": "https://www.pornone.com/search?q=",
+    "fields": {
+      "image": "poster=\"([\\s\\S]*?)\"",
+      "embed": {
+        "regexProp": {
+          "width": "width=&quot;(\\d+)&quot;",
+          "src": "src=&quot;(.*)&quot;\\swidth",
+          "height": "height=&quot;(\\d+)&quot;"
+        },
+        "regexTag": "&lt;iframe\\s*(.*)&gt;"
+      },
+      "title": "<title>(.*)<\\/title>",
+      "tags": "<span class=\"tags links\">([^<]*?)</span>"
+    },
+    "pageMatrix": {
+      "fields": ["URL", "Time", "Photo", "Text"],
+      "pagePattern": "<a\\s*href=\"([^\"]*?page=\\d+)\">[\\d]*?</a>"
+    },
+    "Count": 4458,
+    "modelParser": {
+      "pattern": "<img width=\"210\".*src=\"(.*)\"\\s+alt",
+      "url": "http://www.redtube.com/pornstar/[MODELNAME]"
+    },
+    "pageParser": "<div\\s*class=\"video\">[\\s\\S]*?href=\"([^\"]*?)\"[\\s\\S]*?<span class=\"time\">([^\\/]*?)<\\/span>[\\s\\S]*?<img\\s+src=\"([\\s\\S]*?)\"\\s+alt=\"([\\s\\S]*?)\"\\s+width",
+    "pageRegex": "https:\\/\\/www\\.pornone\\.com\\/search\\/(\\d+)\\?q=[^\"]+",
+    "domain": "pornone.com"
+  },
+  {
+    "searchURL": "https://javfinder.tv/search/movie/[value].html",
+    "fields": {
+      "image": "<meta property=\"og:image\" content=\"([^\"]*?)\" />",
+      "model": "<a href=\"\\/star\\/[^\"]*?\">([^<]*?)</a>",
+      "embed": {
+        "regexProp": {
+          "width": 560,
+          "src": ".*src=\"(.*)\"\\s*frameborder",
+          "height": 315
+        },
+        "regexTag": "<iframe\\swidth=(.*)"
+      },
+      "title": "<title>(.*)<\\/title>",
+      "tags": "<a\\shref=\"/tag/.*\">(.*)</a>"
+    },
+    "pageMatrix": {
+      "fields": ["URL", "Photo", "Text", "Time"],
+      "prefix": null,
+      "fieldText": "URL,Photo,Text,Time"
+    },
+    "alternate": "javfinder.sh",
+    "modelParser": {
+      "pattern": "<a\\shref=\"/star/.*\">(.*)</a>",
+      "url": "http://www.redtube.com/pornstar/[MODELNAME]"
+    },
+    "pageParser": "",
+    "spaceChar": "-",
+    "pageRegex": "\\/search\\/movie\\/[^\\/]*?\\/page\\-(\\d+)\\.html",
+    "domain": "javfinder.tv"
+  },
+  {
+    "searchURL": "https://javladies.com/?s=",
+    "fields": {
+      "image": "<meta\\s+property=\"og:image\"\\s+content=\"([^\"]*?)\"\\s\\/>",
+      "model": "\\/Actor\\/[^\"]+\\/\" title=\"([^\"]+)\"",
+      "embed": {
+        "regexProp": {
+          "width": "width=\"(\\d+)\"\\s+",
+          "src": "src=\"([^\"]*?)\"",
+          "height": "height=\"(\\d+)\"\\s+"
+        },
+        "regexTag": "<iframe(.*)"
+      },
+      "title": "<title>(.*)<\\/title>",
+      "tags": "tag\\/[^\"]+\\/\" class=\"font-size-1\">([\\s\\S]*?)<\\/a>"
+    },
+    "pageMatrix": {
+      "fields": ["URL", "Text", "Photo", "Time"],
+      "prefix": null,
+      "fieldText": "URL,Text,Photo,Time"
+    },
+    "Count": 555,
+    "modelParser": {
+      "pattern": "<img width=\"210\".*src=\"(.*)\"\\s+alt",
+      "url": "http://www.redtube.com/pornstar/[MODELNAME]"
+    },
+    "pageParser": "<div class=\"entry-content\">[\\s\\S]*?href=\"([^\"]*?)\" target=\"_self\" title=\"([^\"]*?)\"[\\s\\S]*?src=\"([^\"]*?)\"",
+    "pageRegex": "https:\\/\\/javladies\\.com\\/page\\/(\\d+)\\/\\?s=[^=]*?",
+    "domain": "javladies.com"
+  },
+  {
+    "searchURL": "https://javsub.co/?s=[value]",
+    "fields": {
+      "image": "<meta property=\"og:image\" content=\"([^\"]*?)\" />",
+      "model": "<a href=\"\\/star\\/[^\"]*?\">([^<]*?)</a>",
+      "embed": {
+        "regexProp": {
+          "width": 560,
+          "src": ".*src=\"(.*)\"\\s*frameborder",
+          "height": 315
+        },
+        "regexTag": "<iframe\\swidth=(.*)"
+      },
+      "title": "<title>(.*)<\\/title>",
+      "tags": "<a\\shref=\"/tag/.*\">(.*)</a>"
+    },
+    "pageMatrix": {
+      "fields": ["URL", "Text", "Photo", "Time"],
+      "prefix": "",
+      "fieldText": "URL,Text,Photo,Time"
+    },
+    "alternate": "javfinder.sh",
+    "Count": 316,
+    "modelParser": {
+      "pattern": "<a\\shref=\"/star/.*\">(.*)</a>",
+      "url": "http://www.redtube.com/pornstar/[MODELNAME]"
+    },
+    "pageParser": "<article[\\s\\S]*?href=\"([^\"]*?)\" title=\"([^\"]*?)\"[\\s\\S]*?src=\"([^\"]*?)\"[\\s\\S]*?<span class=\"duration\">([^<]+)</span>",
+    "spaceChar": "-",
+    "pageRegex": "https.*[^\\/]*?\\/page\\/(\\d+)",
+    "domain": "javsub.co"
+  },
+  {
+    "searchURL": "https://xhamster.com/search?q=",
+    "fields": {
+      "image": "background-image: url\\(https:([^\\)]*?)\\)",
+      "embed": {
+        "regexProp": {
+          "width": "width=\\\\\"(\\d+)\\\\\"\\s+",
+          "src": ".*src=\\\\\"([^\"]*?)\\\\\".*width",
+          "height": "height=\\\\\"(\\d+)\\\\\"\\s+"
+        },
+        "regexTag": "iframe(.*)iframe"
+      },
+      "title": "<title.*>(.*)<\\/title>",
+      "tags": "<meta itemprop=\"name\" content=\"([^\"]*?)\">"
+    },
+    "pageMatrix": {
+      "fields": ["URL", "Photo", "Text", "Time"],
+      "fieldText": "URL,Photo,Text,Time"
+    },
+    "Count": 4443,
+    "modelParser": {
+      "pattern": "<img width=\"210\".*src=\"(.*)\"\\s+alt",
+      "url": "http://www.redtube.com/pornstar/[MODELNAME]"
+    },
+    "pageParser": "<div class=\"thumb-list__item video-thumb role-pop\"[\\s\\S]*? href=\"([^\"]+)\"[\\s\\S]*?class=\"thumb-image-container__image\" src=\"([^\"]+)\"[\\s\\S]*?alt=\"([^\"]+)\"[\\s\\S]*?<div class=\"thumb-image-container__duration\">([^\\/]+)</div>",
+    "pageRegex": "",
+    "domain": "xhamster.com"
+  },
+  {
+    "fields": {
+      "image": "\"og:image\" content=\"(.*)\"",
+      "embed": {
+        "regexProp": {
+          "src": "src=\"(.*)\"\\s+width",
+          "width": "width=\"(\\d+)\"\\s+",
+          "height": "height=\"(\\d+)\"\\s+"
+        },
+        "regexTag": "<iframe\\s*(.*)>"
+      },
+      "title": "<title>(.*)<\\/title>"
+    },
+    "modelParser": {
+      "pattern": "<img width=\"210\".*src=\"(.*)\"\\s+alt",
+      "url": "http://www.redtube.com/pornstar/[MODELNAME]"
+    },
+    "domain": "shemalemodelstube.com",
+    "Count": 1
+  },
+  {
+    "searchURL": "https://javtrust.com/search/movie/[value].html",
+    "fields": {
+      "image": "<meta property=\"og:image\" content=\"([^\"]*?)\" />",
+      "model": "<a href=\"[^\"]+\\/star\\/[^\"]*?\">([^<]*?)<\\/a>",
+      "embed": {
+        "regexProp": {
+          "width": 560,
+          "src": ".*src=\"([^\"]*?)\"",
+          "height": 315
+        },
+        "regexTag": "<iframe id=\"avcms_player\" class=\"embed-responsive-item\"([\\s\\S]*?)allowfullscreen"
+      },
+      "title": "<title>(.*)<\\/title>",
+      "tags": "<a href=\"[^\"]+\\/tag\\/[^\"]*?\" title=\"([^\"]+)\">",
+      "desc": "<div class=\"main-content\">([^<]+)<\\/div>"
+    },
+    "pageMatrix": {
+      "fields": ["URL", "Photo", "Text", "Time"],
+      "prefix": null,
+      "fieldText": "URL,Photo,Text,Time"
+    },
+    "alternate": "javfinder.sh",
+    "Count": 2227,
+    "modelParser": {
+      "pattern": "<a\\shref=\"/star/.*\">(.*)</a>",
+      "url": "http://www.redtube.com/pornstar/[MODELNAME]"
+    },
+    "pageParser": "<div class=\"col-md-3 text-center main-item\">[\\s\\S]*?href=\"([^\"]*?)\"[\\s\\S]*?data-src=\"[^\"]*?(https[^\"]*?)\" alt=\"([^\"]*?)\" [\\s\\S]*?<span class=\"time-video\">([^\\/]*?)<\\/span>",
+    "spaceChar": "-",
+    "pageRegex": "\\/search\\/movie\\/[^\\/]*?\\/page\\-(\\d+)\\.html",
+    "domain": "javtrust.com"
+  },
+  {
+    "searchURL": "https://veporn.net/?s=",
+    "fields": {
+      "image": "<meta\\s*itemprop=\"thumbnailUrl\"\\s*content=\"([^\"]*?)\"\\s*/>",
+      "model": "title=\"More videos from ([^\"]*?)\"",
+      "embed": {
+        "regexProp": { "src": "(.*)", "width": 688, "height": 516 },
+        "regexTag": "<meta\\s*itemprop=\"embedURL\"\\s*content=\"([^\"]*?)\"\\s*/>"
+      },
+      "title": "<title>(.*)<\\/title>"
+    },
+    "modelParser": {
+      "pattern": "<img width=\"210\".*src=\"(.*)\"\\s+alt",
+      "url": "http://www.redtube.com/pornstar/[MODELNAME]"
+    },
+    "domain": "veporn.net"
+  },
+  {
+    "searchURL": "http://www.xnxx.com/?k=",
+    "fields": {
+      "image": "\"og:image\" content=\"(.*)\"",
+      "model": "<a class=\"link\" href=\".*model.*\">([a-zA-Z\\s]+)</a>",
+      "embed": {
+        "regexProp": {
+          "width": "width=(\\d+)\\s+",
+          "src": "src=&quot;(.*)&quot;\\s+f",
+          "height": "height=(\\d+)\\s+"
+        },
+        "regexTag": "&lt;iframe(.*)&gt;"
+      },
+      "title": "<title>(.*)<\\/title>",
+      "tags": "<a\\s*href=\"/tags/[\\s\\S]*?\">([\\s\\S]*?)</a>"
+    },
+    "pageMatrix": {
+      "fields": ["URL", "Photo", "Text", "Time"],
+      "prefix": "http://www.xnxx.com"
+    },
+    "Count": 46,
+    "modelParser": {
+      "pattern": "<img width=\"210\".*src=\"(.*)\"\\s+alt",
+      "url": "http://www.redtube.com/pornstar/[MODELNAME]"
+    },
+    "pageParser": null,
+    "domain": "xnxx.com"
+  },
+  {
+    "searchURL": "https://www.youporn.com/search/?query=",
+    "fields": {
+      "image": "<meta\\s*property=\"og:image\"\\s*content=\"([^\"]*?)\"\\s*/>",
+      "model": "<a href=\"/pornstar/[^\"]*?\"\\s*id=\"\\d+\">([\\s\\S]*?)</a>",
+      "embed": {
+        "regexProp": {
+          "width": "width='([^\"]*?)'",
+          "src": "src='([^\"]*?)'",
+          "height": "height='([^\"]*?)'"
+        },
+        "regexTag": "\"<iframe(.*)"
+      },
+      "title": "<title>(.*)<\\/title>",
+      "tags": "<li\\s*id='cat_\\d+'[\\s\\S]*?class=\"active\">([\\s\\S]*?)</li>"
+    },
+    "pageMatrix": {
+      "fields": ["URL", "Photo", "Text", "Time"],
+      "prefix": "https://www.youporn.com"
+    },
+    "Count": 740,
+    "modelParser": {
+      "pattern": "<img width=\"210\".*src=\"(.*)\"\\s+alt",
+      "url": "http://www.redtube.com/pornstar/[MODELNAME]"
+    },
+    "pageParser": null,
+    "domain": "youporn.com"
+  },
+  {
+    "searchURL": "https://www.ashemaletube.com/search/[value]/?sort=re",
+    "fields": {
+      "image": "<meta\\sname=\"twitter:image\"\\sproperty=\"og:image\"\\scontent=\"(.*)\"",
+      "model": "alt=\"Photo\">([\\s\\S]*?)<\\/a>",
+      "embed": {
+        "regexProp": {
+          "width": "width=&quot;(\\d+)&quot;\\s+",
+          "src": ".*src=&quot;(.*)&quot;.*width.*",
+          "height": "height=&quot;(\\d+)&quot;\\s+"
+        },
+        "regexTag": "&lt;iframe(.*)&lt;\\/iframe&gt;\""
+      },
+      "title": "<title>(.*)<\\/title>",
+      "card": "class=\"model-card\"\\s*href=\"(.*?)\"",
+      "tags": "<a\\s*class=\"tag-item\"\\s*href=\"[\\s\\S]*?\">([\\s\\S]*?)<\\/a>"
+    },
+    "pageMatrix": {
+      "fields": ["URL", "Photo", "Text", "Time"],
+      "prefix": "https://ashemaletube.com",
+      "pagePattern": "<a\\s*href=\"(/search[^\"]*?/page\\d+.html[^\"]*?)\"\\s*>[\\d]*?</a>"
+    },
+    "Count": 3390,
+    "modelParser": {
+      "pattern": "<img.*src=\"(.*)\"",
+      "url": "https://www.ashemaletube.com/models/?modelsearchSubmitCheck=FORM_SENDED&key=models&mode=model-search&searchName=[MODELNAME]"
+    },
+    "pageParser": "<div\\s*class=\"thumb\\s*vidItem\"[\\s\\S]*?a\\s*href=\"([^\"]*?)/\"[\\s\\S]*?<img\\s*src=\"([^\"]*?)\"\\s*alt=\"([^\"]*?)\"[\\s\\S]*?<div class=\"fs11 viddata flr time-label-wrapper\">\\D+([\\s\\S]*?)<\\/span>",
+    "spaceChar": "_",
+    "pageRegex": "\\/search\\/[^\\/]*?\\/(\\d+)\\/\\?sort=re",
+    "domain": "ashemaletube.com"
+  },
+  {
+    "searchURL": "https://eporner.com",
+    "fields": {
+      "image": "<meta\\s+property=\"og:image\"\\s+content=\"([^\"]*?)\"\\s\\/>",
+      "model": "<a\\shref=\"\\/pornstar\\/[^\"]*?\\/\">([^<]*?)<\\/a>",
+      "embed": {
+        "regexProp": {
+          "width": "width=\"(\\d+)\"\\s+",
+          "src": "src=\"([^\"]*?)\"",
+          "height": "height=\"(\\d+)\"\\s+"
+        },
+        "regexTag": "&lt;iframe\\s*(.*)allowfullscreen"
+      },
+      "title": "<title>(.*)<\\/title>",
+      "tags": "<a\\shref=\"\\/search\\/[^\"]*?\\/\">([^<]*?)<\\/a>"
+    },
+    "pageMatrix": { "fields": ["Photo", "Text", "URL", "Time"] },
+    "Count": 7,
+    "modelParser": {
+      "pattern": "<img width=\"210\".*src=\"(.*)\"\\s+alt",
+      "url": "http://www.redtube.com/pornstar/[MODELNAME]"
+    },
+    "pageParser": null,
+    "domain": "eporner.com"
+  },
+  {
+    "searchURL": "http://pornbraze.com/search/video?s=",
+    "fields": {
+      "image": "<meta property=\"og:image\" content=\"(.*)\">",
+      "embed": {
+        "regexProp": {
+          "width": 688,
+          "src": "src=\"([^\"]*?)\"",
+          "height": 516
+        },
+        "regexTag": "<iframe(.*)allowfullscreen"
+      },
+      "title": "<title>(.*)<\\/title>",
+      "tags": "<a href=\"\\/[^\"]+\\/\">([^<]+)<\\/a>,"
+    },
+    "pageMatrix": {
+      "fields": ["Photo", "Text", "Time", "URL"],
+      "prefix": "https://pornbraze.com",
+      "fieldText": "Photo,Text,Time,URL"
+    },
+    "Count": 5389,
+    "modelParser": {
+      "pattern": "<img width=\"210\".*src=\"(.*)\"\\s+alt",
+      "url": "http://www.redtube.com/pornstar/[MODELNAME]"
+    },
+    "pageParser": "<div\\sclass=\"video\">[\\s\\S]*?<img src=\"([^\"]+)\" alt=\"([^\"]+)\"[\\s\\S]*?<span class=\"duration\">[\\s\\S]*?([0-9\\:]+)[\\s\\S]*?<\\/span>[\\s\\S]*?href=\"([^\"]+)\"",
+    "pageRegex": "https[^=]*?s=[^=]*?=(\\d+)",
+    "domain": "pornbraze.com"
+  },
+  {
+    "searchURL": "https://javfinder.la/search/movie/[value].html",
+    "fields": {
+      "image": "<meta property=\"og:image\" content=\"([^\"]*?)\" />",
+      "model": "<a href=\"\\/star\\/[^\"]*?\">([^<]*?)</a>",
+      "embed": {
+        "regexProp": {
+          "width": 560,
+          "src": ".*src=\"([^\"]*?)\"",
+          "height": 315
+        },
+        "regexTag": "<iframe id=\"avcms_player\" class=\"embed-responsive-item\"([\\s\\S]*?)allowfullscreen"
+      },
+      "title": "<title>(.*)<\\/title>",
+      "tags": "<a\\shref=\"/tag/.*\">(.*)</a>"
+    },
+    "pageMatrix": {
+      "fields": ["URL", "Photo", "Text", "Time"],
+      "prefix": null
+    },
+    "alternate": "javfinder.sh",
+    "Count": 11244,
+    "modelParser": {
+      "pattern": "<a\\shref=\"/star/.*\">(.*)</a>",
+      "url": "http://www.redtube.com/pornstar/[MODELNAME]"
+    },
+    "pageParser": "<div class=\"col-md-3 text-center main-item\">[\\s\\S]*?href=\"([^\"]*?)\"[\\s\\S]*?data-src=\"[^\"]*?(https[^\"]*?)\" alt=\"([^\"]*?)\" [\\s\\S]*?<span class=\"time-video\">([^\\/]*?)<\\/span>",
+    "spaceChar": "-",
+    "pageRegex": "\\/search\\/movie\\/[^\\/]*?\\/page\\-(\\d+)\\.html",
+    "domain": "javfinder.la"
+  },
+  {
+    "searchURL": "https://www.redtube.com/?search=",
+    "fields": {
+      "image": "\"og:image\" content=\"(.*)\"",
+      "model": "data-suffix=\"pornstar_from_video_page\">([A-Za-z\\s]+)<\\/a>",
+      "embed": {
+        "regexProp": {
+          "width": "width=\\\\\"(\\d+)\\\\\"\\s+",
+          "src": ".*rc=\\\\\"(.*)\\\\\"\\s+f",
+          "height": "height=\\\\\"(\\d+)\\\\\"\\s+"
+        },
+        "regexTag": "iframe\\s+s(.*)>"
+      },
+      "title": "<title>(.*)<\\/title>",
+      "tags": "<a\\s+href=\"/redtube/\\w+\"\\s+title=\"\\b[^\"]+?\\b\">\\b([^>]+?)\\b</a>"
+    },
+    "pageMatrix": {
+      "fields": ["URL", "Text", "Time", "Photo"],
+      "prefix": "https://www.redtube.com"
+    },
+    "Count": 2587,
+    "modelParser": {
+      "pattern": "<img width=\"210\".*src=\"(.*)\"\\s+alt",
+      "url": "http://www.redtube.com/pornstar/[MODELNAME]"
+    },
+    "pageParser": null,
+    "domain": "redtube.com"
+  },
+  {
+    "searchURL": "https://mundoporn.net/?s=",
+    "fields": {
+      "image": "<meta\\s+itemprop=\"image\"\\s+content=\"([^\"]*?)\"\\s\\/>",
+      "model": "<a\\shref=\"\\/pornstar\\/[^\"]*?\\/\">([^<]*?)<\\/a>",
+      "embed": {
+        "regexProp": {
+          "width": "width=\"(\\d+)\"\\s+",
+          "src": "src=\"([^\"]*?)\"",
+          "height": "height=\"(\\d+)\"\\s+"
+        },
+        "regexTag": "<iframe\\s*(.*)allowfullscreen"
+      },
+      "title": "<title>(.*)<\\/title>",
+      "tags": "<a\\shref=\"[^\"]*?\"\\srel=\"tag\">([^<]*?)<\\/a>"
+    },
+    "pageMatrix": {
+      "fields": ["Photo", "Text", "URL", "Time"],
+      "fieldText": "Photo,Text,URL,Time"
+    },
+    "Count": 505,
+    "modelParser": {
+      "pattern": "<img width=\"210\".*src=\"(.*)\"\\s+alt",
+      "url": "http://www.redtube.com/pornstar/[MODELNAME]"
+    },
+    "pageParser": "",
+    "spaceChar": "+",
+    "pageRegex": "https:\\/\\/mundoporn\\.net\\/page\\/(\\d+)\\/\\?s=[^']+",
+    "domain": "mundoporn.net"
+  },
+  {
+    "searchURL": "https://www.tranny.one/search/movie/[value].html",
+    "fields": {
+      "image": "data-videothumb=\"([^\"]*?)\"",
+      "model": "<a href=\"https:\\/\\/www.thebestshemalevideos.com\\/models\\/[^\"]*?/\">([^\\/]*?)<\\/a>",
+      "embed": {
+        "regexProp": {
+          "width": "width=\"(\\d+)\"",
+          "src": "src=\"([^\"]*?)\"",
+          "height": "height=\"(\\d+)\""
+        },
+        "regexTag": "iframe\\s*(src=\"https://embeds.tranny.one[^\"]*?\"[\\s\\S]+)allowfullscreen"
+      },
+      "title": "<title>(.*)<\\/title>",
+      "tags": "<a\\shref=\"/tag/.*\">(.*)</a>"
+    },
+    "pageMatrix": {
+      "fields": ["URL", "Photo", "Text", "Time"],
+      "prefix": "https://www.javdoe.com"
+    },
+    "modelParser": {
+      "pattern": "<a\\shref=\"/star/.*\">(.*)</a>",
+      "url": "http://www.redtube.com/pornstar/[MODELNAME]"
+    },
+    "pageParser": null,
+    "spaceChar": "-",
+    "pageRegex": "\\/search\\/movie\\/[^\\/]*?\\/page\\-(\\d+)\\.html",
+    "domain": "tranny.one",
+    "Count": 250
+  },
+  {
+    "searchURL": "https://javfinder.ru/search/movie/[value].html",
+    "fields": {
+      "image": "wrap\\-meta[\\s\\S]+<img src=\".*url=(.*)\" alt=\"\"",
+      "model": "<a href=\"\\/star\\/[^\"]*?\">([^<]*?)</a>",
+      "embed": {
+        "regexProp": {
+          "width": 560,
+          "src": ".*src=\"(.*)\"\\s*frameborder",
+          "height": 315
+        },
+        "regexTag": "<iframe\\swidth=(.*)"
+      },
+      "title": "<title>(.*)<\\/title>",
+      "tags": "<a\\shref=\"/tag/.*\">(.*)</a>"
+    },
+    "pageMatrix": {
+      "fields": ["URL", "Photo", "Text", "Time"],
+      "prefix": "https://javfinder.ru"
+    },
+    "Count": 55,
+    "modelParser": {
+      "pattern": "<a\\shref=\"/star/.*\">(.*)</a>",
+      "url": "http://www.redtube.com/pornstar/[MODELNAME]"
+    },
+    "pageParser": null,
+    "spaceChar": "-",
+    "pageRegex": "\\/search\\/movie\\/[^\\/]*?\\/page\\-(\\d+)\\.html",
+    "domain": "javfinder.ru"
+  },
+  {
+    "fields": {
+      "image": "\"og:image\" content=\"(.*)\"",
+      "model": "data-suffix=\"pornstar_from_video_page\">([A-Za-z\\s]+)<\\/a>",
+      "embed": {
+        "regexProp": {
+          "width": "width=\\\\\"(\\d+)\\\\\"\\s+",
+          "src": ".*rc=\\\\\"(.*)\\\\\"\\s+f",
+          "height": "height=\\\\\"(\\d+)\\\\\"\\s+"
+        },
+        "regexTag": "iframe\\s+s(.*)>"
+      },
+      "title": "<title>(.*)<\\/title>"
+    },
+    "modelParser": {
+      "pattern": "<img width=\"210\".*src=\"(.*)\"\\s+alt",
+      "url": "http://www.redtube.com/pornstar/[MODELNAME]"
+    },
+    "domain": "dmm.co.jp",
+    "Count": 133
+  },
+  {
+    "searchURL": "http://javhub.net/search/",
+    "fields": {
+      "image": "class=\"vid-cover\".*src=\"(.*)\"",
+      "model": "<a href=\"\\/tag\\/[^\"]*?\" class=\"actress\\-name\".*>([^<]*?)</a>",
+      "embed": {
+        "regexProp": { "src": ".*src=\"(.*)\"\\s*frameborder" },
+        "regexTag": "<iframe(.*)webkitallowfullscreen"
+      },
+      "title": "<title>(.*)<\\/title>",
+      "tags": "<a\\s*href=\"[\\s\\S]*?\"\\s*class=\"genra-name\"\\s*target=\"_blank\">([\\s\\S]*?)<\\/a>"
+    },
+    "modelParser": {
+      "pattern": "<img width=\"210\".*src=\"(.*)\"\\s+alt",
+      "url": "http://www.redtube.com/pornstar/[MODELNAME]"
+    },
+    "pageParser": null,
+    "domain": "javhub.net",
+    "Count": 33
+  },
+  {
+    "searchURL": "https://javengsub.com",
+    "fields": {
+      "image": "<meta\\s+property=\"og:image\"\\s+content=\"([^\"]*?)\"\\s\\/>",
+      "model": "<a\\shref=\"\\/pornstar\\/[^\"]*?\\/\">([^<]*?)<\\/a>",
+      "embed": {
+        "regexProp": {
+          "width": "width=\"(\\d+)\"\\s+",
+          "src": "src=\"([^\"]*?)\"",
+          "height": "height=\"(\\d+)\"\\s+"
+        },
+        "regexTag": "&lt;iframe\\s*(.*)allowfullscreen"
+      },
+      "title": "<title>(.*)<\\/title>",
+      "tags": "<a\\shref=\"\\/search\\/[^\"]*?\\/\">([^<]*?)<\\/a>",
+      "desc": "<div\\sclass=\"main\\-content\">([^<]*?)<\\/div>"
+    },
+    "modelParser": {
+      "pattern": "<img width=\"210\".*src=\"(.*)\"\\s+alt",
+      "url": "http://www.redtube.com/pornstar/[MODELNAME]"
+    },
+    "pageMatrix": { "fields": ["Photo", "Text", "URL", "Time"] },
+    "pageParser": null,
+    "domain": "javengsub.com"
+  },
+  {
+    "fields": {
+      "image": "screenShot\\s+=\\s+'(.*)';",
+      "embed": {
+        "regexProp": {
+          "src": ".*src=\"(.*)\".*frameborder.*",
+          "width": "width=\"(\\d+)\"\\s+",
+          "height": "height=\"(\\d+)\"\\s+"
+        },
+        "regexTag": "&lt;iframe(.*)&lt;\\/iframe&gt;"
+      },
+      "title": "<title>(.*)<\\/title>"
+    },
+    "modelParser": {
+      "pattern": "<img width=\"210\".*src=\"(.*)\"\\s+alt",
+      "url": "http://www.redtube.com/pornstar/[MODELNAME]"
+    },
+    "domain": "spankwire.com",
+    "Count": 1
+  },
+  {
+    "searchURL": "https://www.javdoe.com/search/movie/[value].html",
+    "fields": {
+      "image": "<meta property=\"og:image\" content=\"([^\"]*?)\" />",
+      "model": "<div class=\"meta-content\"[\\s\\S]*?href=\"\\/star\\/[^\"]*?\">([^\\/]*?)<\\/a>",
+      "embed": {
+        "regexProp": {
+          "width": 560,
+          "src": ".*src=\"(.*)\"\\s*frameborder",
+          "height": 315
+        },
+        "regexTag": "<iframe\\swidth=(.*)"
+      },
+      "title": "<title>(.*)<\\/title>",
+      "tags": "<a\\shref=\"/tag/.*\">(.*)</a>"
+    },
+    "pageMatrix": {
+      "fields": ["URL", "Photo", "Text", "Time"],
+      "prefix": null,
+      "fieldText": "URL,Photo,Text,Time"
+    },
+    "alternate": "javdoe.tv",
+    "Count": 48623,
+    "modelParser": {
+      "pattern": "<a\\shref=\"/star/.*\">(.*)</a>",
+      "url": "http://www.redtube.com/pornstar/[MODELNAME]"
+    },
+    "pageParser": "",
+    "spaceChar": "-",
+    "pageRegex": "\\/search\\/movie\\/[^\\/]*?\\/page\\-(\\d+)\\.html",
+    "domain": "javdoe.com"
+  },
+  {
+    "searchURL": "http://www.xvideos.com/?k=",
+    "fields": {
+      "image": "\"og:image\" content=\"(.*)\"",
+      "model": "<a.*class=\"hg\">([a-zA-Z\\s]+)<\\/a>,",
+      "embed": {
+        "regexProp": {
+          "width": "width=(\\d+)\\s+",
+          "src": ".*src=&quot;(.*)&quot;.*frame.*",
+          "height": "height=(\\d+)\\s+"
+        },
+        "regexTag": "&lt;iframe(.*)&lt;\\/iframe&gt;\""
+      },
+      "title": "<title>(.*)<\\/title>",
+      "tags": "<a\\s*href=\"\\/tags\\/([^\"]*?)\"\\sclass"
+    },
+    "pageMatrix": {
+      "fields": ["URL", "Photo", "Text", "Time"],
+      "prefix": "https://www.xvideos.com",
+      "fieldText": "URL,Photo,Text,Time"
+    },
+    "Count": 6283,
+    "modelParser": {
+      "pattern": "<img width=\"210\".*src=\"(.*)\"\\s+alt",
+      "url": "http://www.redtube.com/pornstar/[MODELNAME]"
+    },
+    "pageParser": "<div id=\"video_\\d+\".*<a href=\"([^\"]*?)\"><img src=\"[^\"]*?\" data-src=\"([^\"]*?)\".*title=\"([^\"]*?)\".*<span class=\"duration\">([^\\/]*?)<\\/span>",
+    "pageRegex": "/\\/\\?k=[a-z]+\\&amp;[\\w+=\\w+&amp;]*?p=(\\d+)",
+    "domain": "xvideos.com"
+  },
+  {
+    "searchURL": "https://thebestshemalevideos.com/search/movie/[value].html",
+    "fields": {
+      "image": "<meta\\sproperty=\"og:image\".*content=\"[^\"]*?(https[^\"]*?)\"",
+      "model": "<a href=\"https:\\/\\/www.thebestshemalevideos.com\\/models\\/[^\"]*?/\">([^\\/]*?)<\\/a>",
+      "embed": {
+        "regexProp": {
+          "width": 560,
+          "src": "src=\"([^\"]*?)\"",
+          "height": 315
+        },
+        "regexTag": "<iframe width=\"[^\"]*?\" height=\"[^\"]*?\"(.*)"
+      },
+      "title": "<title>(.*)<\\/title>",
+      "tags": "<a\\shref=\"/tag/.*\">(.*)</a>"
+    },
+    "pageMatrix": {
+      "fields": ["URL", "Photo", "Text", "Time"],
+      "prefix": "https://www.javdoe.com"
+    },
+    "modelParser": {
+      "pattern": "<a\\shref=\"/star/.*\">(.*)</a>",
+      "url": "http://www.redtube.com/pornstar/[MODELNAME]"
+    },
+    "pageParser": null,
+    "spaceChar": "-",
+    "pageRegex": "\\/search\\/movie\\/[^\\/]*?\\/page\\-(\\d+)\\.html",
+    "domain": "thebestshemalevideos.com",
+    "Count": 24
+  },
+  {
+    "searchURL": "https://www.javdisk.com/search/movie/[value].html",
+    "fields": {
+      "image": "<meta property=\"og:image\" content=\"([^\"]*?)\" />",
+      "model": "<div class=\"meta-content\"[\\s\\S]*?href=\"\\/star\\/[^\"]*?\">([^\\/]*?)<\\/a>",
+      "embed": {
+        "regexProp": {
+          "width": 560,
+          "src": ".*src=\"(.*)\"\\s*frameborder",
+          "height": 315
+        },
+        "regexTag": "<iframe\\swidth=(.*)"
+      },
+      "title": "<title>(.*)<\\/title>",
+      "tags": "tag\\/(\\w+)\\.",
+      "desc": "<div\\sclass=\"main\\-content\">([^<]*?)<\\/div>"
+    },
+    "pageMatrix": {
+      "fields": ["URL", "Photo", "Text", "Time"],
+      "prefix": null,
+      "fieldText": "URL,Photo,Text,Time"
+    },
+    "alternate": "javdoe.tv",
+    "Count": 2936,
+    "modelParser": {
+      "pattern": "<a\\shref=\"/star/.*\">(.*)</a>",
+      "url": "http://www.redtube.com/pornstar/[MODELNAME]"
+    },
+    "pageParser": "<div class=\"col-md-3 col-sm-6 text-center main-item\">[\\s\\S]*?<a class=\"main-[^\"]*\" href=\"([^\"]*?)\">[\\s\\S]*?<img class=\"placeholder iswatched\" src=\"[^\"]*?\" data-src=\"(https[^\"]*?)\" alt=\"([^\"]*?)\" [\\s\\S]*?",
+    "spaceChar": "-",
+    "pageRegex": "\\/[^>.]*?page\\-([0-9]+)\\.html",
+    "domain": "javdisk.com"
+  },
+  {
+    "searchURL": "https://www.vporn.com/search?q=",
+    "fields": {
+      "image": "poster=\"([\\s\\S]*?)\"",
+      "embed": {
+        "regexProp": {
+          "width": "width=&quot;(\\d+)&quot;",
+          "src": "src=&quot;(.*)&quot;\\swidth",
+          "height": "height=&quot;(\\d+)&quot;"
+        },
+        "regexTag": "&lt;iframe\\s*(.*)&gt;"
+      },
+      "title": "<title>(.*)<\\/title>",
+      "tags": "<span class=\"tags links\">([^<]*?)</span>"
+    },
+    "pageMatrix": {
+      "fields": ["URL", "Time", "Photo", "Text"],
+      "fieldText": "URL,Time,Photo,Text",
+      "pagePattern": "<a\\s*href=\"([^\"]*?page=\\d+)\">[\\d]*?</a>"
+    },
+    "Count": 13864,
+    "modelParser": {
+      "pattern": "<img width=\"210\".*src=\"(.*)\"\\s+alt",
+      "url": "http://www.redtube.com/pornstar/[MODELNAME]"
+    },
+    "pageParser": "",
+    "pageRegex": "https:\\/\\/www\\.vporn\\.com\\/search\\/(\\d+)\\?q=[^\"]+",
+    "domain": "vporn.com"
+  }
+]

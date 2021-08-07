@@ -1,0 +1,10 @@
+.progress-avatar {
+  position: relative;
+  margin: 0 4px;
+}
+
+.progress-avatar .progress-ring {
+  position: absolute;
+  top: 0;
+  left: 0;
+}

@@ -1,0 +1,11 @@
+.ModelInfoCard {
+  max-width: 610px;
+}
+
+.model-info-avatar {
+  margin: 0 12px 2px 0;
+}
+
+.model-info-menu {
+  margin-left: auto;
+}

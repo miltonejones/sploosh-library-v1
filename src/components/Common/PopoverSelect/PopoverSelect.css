@@ -1,0 +1,28 @@
+.PopoverSelect {}
+
+.inputRoot {
+    padding: 4px 4px 4px 0;
+    padding-left: 4px;
+    transition: width 1s linear;
+    width: 100%;
+}
+.inputInput {
+    padding: 4px 4px 4px 0;
+    padding-left: 4px;
+    transition: width 1s linear;
+    width: 100%;
+}
+
+.pop-list {
+    min-width: 300px;
+}
+
+.popover-input {
+    display: flex;
+    align-items: center;
+}
+
+.active {
+    font-weight: bold !important;
+    color: white;
+}

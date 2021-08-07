@@ -1,0 +1,5 @@
+.ShoppingForm {
+  display: flex;
+  min-height: 172px;
+  align-items: center;
+}
