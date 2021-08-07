@@ -274,7 +274,7 @@ const ConnectedVideoGrid = ({
           icon={<Add />}
         />
       </Collapse>
-      <Collapse in={mode === ConnectedVideoGridMode.FIND}>
+      <Collapse in={SearchParams.params.length}>
         {/* {JSON.stringify(payload)} */}
         <Tabs
           value={payload.param || 1}
@@ -285,7 +285,7 @@ const ConnectedVideoGrid = ({
           {SearchParams.params.map((name) => (
             <Tab value={name} label={name} wrapped {...a11yProps(name)} />
           ))}
-          <Tab icon={<Close />} value={-2} />
+          {!!payload.param && <Tab icon={<Close />} value={-2} />}
         </Tabs>
       </Collapse>
 
