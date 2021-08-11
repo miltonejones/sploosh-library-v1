@@ -156,6 +156,7 @@ function PreviewThumb(props) {
     exact,
     domain,
     match,
+    append,
   } = props;
   const className = ["app-data-item"];
   if (selected) className.push("visited");
@@ -175,7 +176,14 @@ function PreviewThumb(props) {
         details
         click={() => window.open(URL)}
       />
-      {Time && <div className="app-data-item-domain app-link">{Time}</div>}
+      {Time && (
+        <div
+          onClick={() => append && append(URL)}
+          className="app-data-item-domain app-link"
+        >
+          {Time}
+        </div>
+      )}
       <div className="app-data-item-maker" style={{ maxWidth: 80 }}>
         <ToolTipText title={`Show all videos from ${domain}`} text={domain} />
       </div>

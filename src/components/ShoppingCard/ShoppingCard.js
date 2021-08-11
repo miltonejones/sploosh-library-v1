@@ -143,7 +143,7 @@ export default class ShoppingCard extends React.Component {
     this.save();
   }
 
-  searchByURL(searchURL) {
+  searchByURL(searchURL, append) {
     const { expand } = this.props;
     const { parsers } = this.state;
     const chosenParser = parsers.filter(
@@ -152,6 +152,9 @@ export default class ShoppingCard extends React.Component {
     if (chosenParser) {
       putSearchRequest(searchURL, chosenParser, "", this.threadedResponse).then(
         (candidates) => {
+          !!append &&
+            !!this.state.candidates &&
+            (candidates = this.state.candidates.concat([...candidates]));
           candidates = candidates.sort(CandidateSort);
           this.setState({ ...this.state, candidates });
           expand && expand(true);
@@ -387,6 +390,7 @@ export default class ShoppingCard extends React.Component {
                 collated?.truncated.map((candidate, i) => (
                   <PreviewThumb
                     key={i}
+                    append={(i) => this.searchByURL(i, !0)}
                     {...candidate}
                     select={() => {
                       candidate.selected = !candidate.selected;
